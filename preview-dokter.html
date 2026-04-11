@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Preview — Tim Dokter (Gaya Kolase Grup)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #1A0D30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    /* ── SECTION WRAPPER ── */
+    .section-doctors {
+      width: 100%;
+      max-width: 900px;
+      padding: 4rem 2rem;
+      background: linear-gradient(160deg, #EDE4F8 0%, #D8C4F0 35%, #C8AAED 65%, #B890D8 100%);
+      border-radius: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-doctors::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(119,68,170,0.15);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+    .section-doctors::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 350px; height: 350px;
+      border-radius: 50%;
+      background: rgba(119,68,170,0.12);
+      filter: blur(70px);
+      pointer-events: none;
+    }
+
+    /* ── HEADING ── */
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 100px;
+      background: rgba(119,68,170,0.14);
+      color: #5533AA;
+      margin-bottom: 0.75rem;
+    }
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      color: #1A0D30;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .section-heading span { color: #6633AA; }
+    .section-sub {
+      color: #6A5080;
+      font-size: 0.93rem;
+      line-height: 1.7;
+      max-width: 440px;
+      margin: 0 auto 3rem;
+    }
+
+    /* ── GROUP COLLAGE ── */
+    .collage-wrap {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* Each row */
+    .collage-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 0;
+    }
+    .collage-row.row-top {
+      /* top row 4 doctors, slightly smaller */
+      margin-bottom: -32px; /* overlap into bottom row */
+      z-index: 1;
+    }
+    .collage-row.row-bottom {
+      z-index: 2;
+    }
+
+    /* Individual collage item */
+    .collage-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      transition: transform 0.3s ease, z-index 0s;
+      cursor: default;
+    }
+    .collage-item:hover {
+      transform: translateY(-10px) scale(1.04);
+      z-index: 10;
+    }
+
+    /* Photo circle */
+    .collage-photo {
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid rgba(255,255,255,0.6);
+      box-shadow:
+        0 8px 32px rgba(80,20,160,0.30),
+        0 2px 8px rgba(80,20,160,0.18),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    /* Top row: smaller circles */
+    .row-top .collage-photo {
+      width: 130px;
+      height: 130px;
+    }
+    /* Bottom row: bigger circles */
+    .row-bottom .collage-photo {
+      width: 160px;
+      height: 160px;
+      border-width: 5px;
+    }
+
+    /* Photo inside */
+    .collage-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* Gradient overlay inside circle */
+    .collage-photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: linear-gradient(to bottom,
+        transparent 40%,
+        rgba(40, 8, 90, 0.55) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Name tag */
+    .collage-name {
+      margin-top: 10px;
+      background: rgba(102, 51, 170, 0.92);
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      line-height: 1.3;
+      text-align: center;
+      padding: 5px 12px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(8px);
+      white-space: nowrap;
+      box-shadow: 0 2px 12px rgba(80,20,160,0.22);
+      max-width: 150px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .row-top .collage-name {
+      font-size: 0.65rem;
+      padding: 4px 10px;
+      max-width: 130px;
+    }
+
+    /* Decorative connector bar */
+    .collage-stem {
+      width: 2px;
+      height: 10px;
+      background: rgba(102,51,170,0.4);
+      margin: 0 auto -1px;
+    }
+
+    /* Inner glow in photo (purple tint at top) */
+    .collage-photo::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 45%;
+      border-radius: 50% 50% 0 0;
+      background: linear-gradient(to bottom,
+        rgba(200,150,255,0.18) 0%,
+        transparent 100%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Horizontal overlap between photos */
+    .collage-item + .collage-item {
+      margin-left: -18px;
+    }
+    .row-top .collage-item + .collage-item {
+      margin-left: -14px;
+    }
+
+    /* Gradient BGs per doctor (same palette as main site) */
+    .photo-dini      { background: linear-gradient(172deg, #9B6BD4 0%, #7438B8 40%, #3C0882 100%); }
+    .photo-jeanyvia  { background: linear-gradient(168deg, #A070D8 0%, #7A40BC 40%, #400A88 100%); }
+    .photo-claudia   { background: linear-gradient(175deg, #A278D8 0%, #7C44BC 40%, #420E88 100%); }
+    .photo-valentina { background: linear-gradient(170deg, #9C6ED8 0%, #783EBA 40%, #3E0884 100%); }
+    .photo-webi      { background: linear-gradient(173deg, #9E70D6 0%, #7B40BB 40%, #400A86 100%); }
+    .photo-dina      { background: linear-gradient(172deg, #9B6BD4 0%, #7438B8 40%, #3C0882 100%); }
+    .photo-aries     { background: linear-gradient(175deg, #A278D8 0%, #7C44BC 40%, #420E88 100%); }
+
+    /* Per-doctor face alignment */
+    .img-dini      { transform: scale(1.5); transform-origin: 50% 10%; }
+    .img-jeanyvia  { transform: scale(1.8); transform-origin: 50% 5%;  }
+    .img-claudia   { transform: scale(1.7); transform-origin: 50% 8%;  }
+    .img-valentina { transform: scale(1.85); transform-origin: 50% 2%; }
+    .img-webi      { transform: scale(1.9); transform-origin: 45% 38%;}
+    .img-dina      { transform: scale(1.4); transform-origin: 50% 8%;  }
+    .img-aries     { transform: scale(1.65); transform-origin: 50% 3%; }
+
+    /* Note badge */
+    .preview-note {
+      position: fixed;
+      top: 16px; left: 50%; transform: translateX(-50%);
+      background: #1A0D30;
+      color: #D8C4F0;
+      font-size: 0.8rem;
+      padding: 8px 20px;
+      border-radius: 100px;
+      border: 1px solid rgba(200,160,255,0.25);
+      z-index: 999;
+      white-space: nowrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .row-top .collage-photo  { width: 90px; height: 90px; }
+      .row-bottom .collage-photo { width: 110px; height: 110px; }
+      .collage-item + .collage-item { margin-left: -10px; }
+      .row-top .collage-item + .collage-item { margin-left: -8px; }
+      .collage-row.row-top { margin-bottom: -22px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="preview-note">PREVIEW SAJA — belum diterapkan ke website</div>
+
+<section class="section-doctors">
+
+  <!-- Heading -->
+  <div style="text-align:center; position:relative; z-index:1;">
+    <span class="section-label">Tim Dokter Kami</span>
+    <h2 class="section-heading">
+      Ditangani oleh<br/>
+      <span>Dokter yang Berpengalaman.</span>
+    </h2>
+    <p class="section-sub">
+      Tim dokter gigi kami berkomitmen memberikan perawatan terbaik
+      dengan keahlian dan ketulusan untuk setiap pasien.
+    </p>
+  </div>
+
+  <!-- Group collage -->
+  <div class="collage-wrap">
+
+    <!-- ROW TOP: 4 dokter (lebih kecil, seperti baris belakang) -->
+    <div class="collage-row row-top">
+
+      <div class="collage-item">
+        <div class="collage-photo photo-dini">
+          <img src="Dini Nawang Palupi,drg.png" alt="drg. Dini Nawang Palupi" class="img-dini" />
+        </div>
+        <div class="collage-stem"></div>
+        <div class="collage-name">drg. Dini Nawang Palupi</div>
+      </div>
+
+      <div class="collage-item">
+        <div class="collage-photo photo-jeanyvia">
+          <img src="Jeanyvia Anggreyni S.,drg.png" alt="drg. Jeanyvia Anggreyni S." class="img-jeanyvia" />
+        </div>
+        <div class="collage-stem"></div>
+        <div class="collage-name">drg. Jeanyvia Anggreyni S.</div>
+      </div>
+
+      <div class="collage-item">
+        <div class="collage-photo photo-claudia">
+          <img src="Claudia Gunawan, drg.png" alt="drg. Claudia Gunawan" class="img-claudia" />
+        </div>
+        <div class="collage-stem"></div>
+        <div class="collage-name">drg. Claudia Gunawan</div>
+      </div>
+
+      <div class="collage-item">
+        <div class="collage-photo photo-valentina">
+          <img src="Valentina, drg.png" alt="drg. Valentina" class="img-valentina" />
+        </div>
+        <div class="collage-stem"></div>
+        <div class="collage-name">drg. Valentina</div>
+      </div>
+
+    </div><!-- /row-top -->
+
+    <!-- ROW BOTTOM: 3 dokter (lebih besar, seperti baris depan) -->
+    <div class="collage-row row-bottom">
+
+      <div class="collage-item">
+        <div class="collage-photo photo-webi">
+          <img src="Webi Paramastri P.,drg.png" alt="drg. Webi Paramastri P." class="img-webi" />
+        </div>
+        <div class="collage-stem"></div>
+        <div class="collage-name">drg. Webi Paramastri P.</div>
+      </div>
+
+      <div class="collage-item">
+        <div class="collage-photo photo-dina">
+          <img src="Dina Yona, drg.png" alt="drg. Dina Yona" class="img-dina" />
+        </div>
+        <div class="collage-stem"></div>
+        <div class="collage-name">drg. Dina Yona</div>
+      </div>
+
+      <div class="collage-item">
+        <div class="collage-photo photo-aries">
+          <img src="Aries Kurniawan, drg.png" alt="drg. Aries Kurniawan" class="img-aries" />
+        </div>
+        <div class="collage-stem"></div>
+        <div class="collage-name">drg. Aries Kurniawan</div>
+      </div>
+
+    </div><!-- /row-bottom -->
+
+  </div><!-- /collage-wrap -->
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palupi Dental Care — Senyum Terbaik Dimulai di Sini</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Palupi Dental Care — klinik gigi modern di Samarinda. 5 dokter berpengalaman, rating 5.0 Google, tersedia di 2 cabang strategis. Scaling, kawat gigi, veneer, bleaching & implan." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#6633AA" />
+
+  <!-- Open Graph (WhatsApp / Facebook preview) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Palupi Dental Care — Senyum Terbaik Dimulai di Sini" />
+  <meta property="og:description" content="Klinik gigi modern di Samarinda. 5+ dokter berpengalaman, 5.0 Google Rating, 2 cabang strategis. Scaling, kawat gigi, veneer, bleaching & implan." />
+  <meta property="og:image"       content="87069801-a8a8-498c-bb68-bb15550632aa_removalai_preview.png" />
+  <meta property="og:locale"      content="id_ID" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Palupi Dental Care — Senyum Terbaik Dimulai di Sini" />
+  <meta name="twitter:description" content="Klinik gigi modern di Samarinda. 5+ dokter berpengalaman, 5.0 Google Rating." />
+  <meta name="twitter:image"       content="87069801-a8a8-498c-bb68-bb15550632aa_removalai_preview.png" />
+
+  <!-- Favicon -->
+  <link rel="icon"             type="image/png" href="87069801-a8a8-498c-bb68-bb15550632aa_removalai_preview.png" />
+  <link rel="apple-touch-icon"                  href="87069801-a8a8-498c-bb68-bb15550632aa_removalai_preview.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --purple:      #9966CC;
+      --purple-dark: #7744AA;
+      --purple-deep: #3D1F6B;
+      --maroon:      #8B2252;
+      --light:       #F6F0FC;
+      --dark:        #1A0D30;
+      --hero-bg:     #6633AA;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+    /* ── NAVBAR ── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(155,118,181,0.12);
+      transition: box-shadow 0.3s;
+    }
+    #navbar.scrolled { box-shadow: 0 4px 30px rgba(122,84,153,0.12); }
+
+    .nav-link {
+      color: #4A3060; font-weight: 500; font-size: 0.875rem;
+      letter-spacing: 0.01em; text-decoration: none;
+      position: relative; transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 2px; background: var(--purple);
+      transition: width 0.25s ease; border-radius: 2px;
+    }
+    .nav-link:hover { color: var(--purple); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link.active { color: var(--purple); }
+    .nav-link.active::after { width: 100%; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #5A2896 0%, #7B3FBA 40%, #9A58CC 70%, #B070DC 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+    }
+
+    @keyframes scroll-bounce {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(9px); }
+    }
+    @keyframes heroContentIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes heroPhotoIn {
+      from { opacity: 0; transform: translateY(40px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes floatCard {
+      0%,100% { transform: translateY(0px); }
+      50%      { transform: translateY(-8px); }
+    }
+
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      display: inline-block;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--purple-dark);
+      padding: 5px 14px;
+      background: rgba(155,118,181,0.12);
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 30px; border-radius: 999px;
+      background: linear-gradient(135deg, #6B3AAA, #9B5FD0);
+      color: white; font-weight: 600; font-size: 0.9rem;
+      letter-spacing: 0.02em; text-decoration: none; border: none;
+      box-shadow: 0 6px 24px rgba(107,58,170,0.4), 0 2px 8px rgba(107,58,170,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      box-shadow: 0 10px 32px rgba(107,58,170,0.5), 0 4px 12px rgba(107,58,170,0.3);
+    }
+    .btn-primary:active { opacity: 0.9; }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 28px; border-radius: 999px;
+      background: transparent; color: white;
+      font-weight: 500; font-size: 0.9rem;
+      border: 1.5px solid rgba(255,255,255,0.45);
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.8);
+    }
+    .btn-outline:active { opacity: 0.9; }
+
+
+    /* ── STATS ── */
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem; font-weight: 700;
+      color: var(--purple-dark); line-height: 1;
+    }
+
+    /* ── CARDS ── */
+    .service-card {
+      background: #fff; border-radius: 20px;
+      padding: 1.75rem 1.5rem;
+      border: 1px solid rgba(155,118,181,0.14);
+      box-shadow: 0 4px 20px rgba(122,84,153,0.06), 0 1px 4px rgba(122,84,153,0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(122,84,153,0.14), 0 4px 16px rgba(122,84,153,0.1);
+    }
+
+    .testimonial-card {
+      background: #fff; border-radius: 20px;
+      padding: 1.75rem;
+      border: 1px solid rgba(155,118,181,0.12);
+      box-shadow: 0 4px 20px rgba(122,84,153,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex; flex-direction: column;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(122,84,153,0.12);
+    }
+
+    /* ── BEFORE/AFTER ── */
+    .ba-card {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.14);
+      position: relative;
+    }
+    .ba-card img { display: block; width: 100%; object-fit: cover; }
+    .ba-overlay {
+      position: absolute; left:0; right:0; bottom: 0;
+      padding: 1.25rem;
+      background: linear-gradient(to top, rgba(20,8,40,0.75) 0%, transparent 100%);
+    }
+
+    /* ── AVATAR ── */
+    .avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.95rem;
+      color: white; flex-shrink: 0;
+    }
+
+    /* ── LOGO blend ── */
+    .logo-blend { mix-blend-mode: multiply; }
+    .logo-screen { mix-blend-mode: screen; }
+
+    /* ── MOBILE MENU ── */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+
+    .stars { color: #F59E0B; }
+
+    /* icon circle */
+    .icon-circle {
+      width: 48px; height: 48px; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-bottom: 1rem;
+    }
+
+    /* Location card */
+    .location-card {
+      border-radius: 24px; overflow: hidden;
+      border: 1px solid rgba(155,118,181,0.15);
+      box-shadow: 0 4px 32px rgba(122,84,153,0.07);
+    }
+
+    /* WA float button */
+    #wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-center: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      align-items: center; justify-content: center;
+    }
+    #wa-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 32px rgba(37,211,102,0.55);
+    }
+    #wa-float:active { transform: scale(0.97); }
+
+    /* ── SERVICE MODAL ── */
+    #service-modal-overlay {
+      position: fixed; inset: 0; z-index: 500;
+      background: rgba(10,4,24,0.72); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 1.5rem;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.28s ease;
+    }
+    #service-modal-overlay.open { opacity: 1; pointer-events: all; }
+    #service-modal {
+      background: #fff; border-radius: 28px;
+      max-width: 560px; width: 100%;
+      padding: 2.5rem;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.28);
+      transform: translateY(32px) scale(0.97);
+      transition: transform 0.28s cubic-bezier(0.16,1,0.3,1);
+      position: relative; max-height: 90vh; overflow-y: auto;
+    }
+    #service-modal-overlay.open #service-modal { transform: translateY(0) scale(1); }
+    .modal-close-btn {
+      position: absolute; top: 1.25rem; right: 1.25rem;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(155,118,181,0.1); border: none;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background 0.2s;
+    }
+    .modal-close-btn:hover { background: rgba(155,118,181,0.22); }
+    .modal-step {
+      display: flex; gap: 12px; margin-bottom: 1rem;
+    }
+    .modal-step-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: linear-gradient(135deg,#9B76B5,#6B4A8B);
+      color: #fff; font-size: 0.72rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+    }
+
+    /* ── TESTIMONIAL COLUMNS ── */
+    @keyframes scrollUp {
+      0%   { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+    .testi-col-wrap {
+      overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .testi-col-inner {
+      display: flex; flex-direction: column; gap: 1.25rem;
+      animation: scrollUp var(--dur, 15s) linear infinite;
+    }
+    .testi-col-inner:hover { animation-play-state: paused; }
+
+    /* ── NAV PILL ── */
+    #nav-pill {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      height: 34px; border-radius: 999px;
+      background: rgba(155,118,181,0.13);
+      pointer-events: none;
+      transition: left 0.22s cubic-bezier(0.16,1,0.3,1),
+                  width 0.22s cubic-bezier(0.16,1,0.3,1),
+                  opacity 0.18s ease;
+      opacity: 0;
+    }
+
+    /* ── SERVICE CARD CLICKABLE ── */
+    .service-card { cursor: pointer; }
+    .service-card-hint {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.72rem; color: var(--purple-dark);
+      font-weight: 600; margin-top: 10px; opacity: 0.75;
+    }
+
+    /* ── IMAGE AUTO SCROLL STRIP ── */
+    @keyframes scroll-left {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .img-strip-outer {
+      overflow: hidden;
+      -webkit-mask: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+      mask: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .img-strip-inner {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      animation: scroll-left 28s linear infinite;
+    }
+    .img-strip-inner:hover { animation-play-state: paused; }
+    .img-strip-item {
+      flex-shrink: 0;
+      width: 220px;
+      height: 300px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(107,58,170,0.15);
+      transition: transform 0.3s ease;
+    }
+    .img-strip-item:hover { transform: scale(1.04); }
+    .img-strip-item img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    /* ── LAMP ANIMATION (Hero) ── */
+    @keyframes lamp-beam-expand {
+      from { opacity: 0.4; width: 12rem; }
+      to   { opacity: 1;   width: 28rem; }
+    }
+    @keyframes lamp-line-expand {
+      from { width: 6rem; opacity: 0; }
+      to   { width: 26rem; opacity: 1; }
+    }
+    @keyframes lamp-glow-in {
+      from { opacity: 0; transform: translateX(-50%) scale(0.5); }
+      to   { opacity: 1; transform: translateX(-50%) scale(1); }
+    }
+    @keyframes hero-title-up {
+      from { opacity: 0; transform: translateY(50px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes hero-sub-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slogan-fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slogan-fade-out {
+      from { opacity: 1; transform: translateY(0); }
+      to   { opacity: 0; transform: translateY(-10px); }
+    }
+    .lamp-beam-l {
+      position: absolute; top: 0; right: 50%;
+      height: 220px; width: 28rem;
+      background: conic-gradient(from 70deg at 100% 0%,
+        rgba(255,255,255,0.28) 0%, rgba(200,160,255,0.14) 18%, transparent 32%);
+      animation: lamp-beam-expand 1.1s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+      transform-origin: right top;
+    }
+    .lamp-beam-r {
+      position: absolute; top: 0; left: 50%;
+      height: 220px; width: 28rem;
+      background: conic-gradient(from 290deg at 0% 0%,
+        rgba(255,255,255,0.28) 0%, rgba(200,160,255,0.14) 18%, transparent 32%);
+      animation: lamp-beam-expand 1.1s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+      transform-origin: left top;
+    }
+    .lamp-line {
+      position: absolute; top: 2px; left: 50%;
+      transform: translateX(-50%);
+      height: 2px; width: 26rem;
+      background: linear-gradient(90deg,
+        transparent 0%, rgba(255,255,255,0.9) 20%,
+        rgba(220,180,255,1) 50%, rgba(255,255,255,0.9) 80%, transparent 100%);
+      border-radius: 2px;
+      animation: lamp-line-expand 1s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+    }
+    .lamp-glow-top {
+      position: absolute; top: -30px; left: 50%;
+      transform: translateX(-50%);
+      width: 160px; height: 100px;
+      border-radius: 50%;
+      background: rgba(210,180,255,0.5);
+      filter: blur(30px);
+      animation: lamp-glow-in 1.2s ease-out 0.3s both;
+    }
+    .lamp-glow-mid {
+      position: absolute; top: 60px; left: 50%;
+      transform: translateX(-50%);
+      width: 280px; height: 120px;
+      border-radius: 50%;
+      background: rgba(180,140,240,0.25);
+      filter: blur(50px);
+      animation: lamp-glow-in 1.4s ease-out 0.4s both;
+    }
+
+    /* ── DOCTOR CARDS ── */
+    .doctor-card {
+      position: relative; border-radius: 24px; overflow: hidden;
+      width: 200px; flex-shrink: 0;
+      box-shadow: 0 8px 32px rgba(80,20,160,0.28), 0 2px 8px rgba(80,20,160,0.15), inset 0 1px 0 rgba(255,255,255,0.22);
+      transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;
+      cursor: default;
+    }
+    .doctor-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 28px 64px rgba(80,20,160,0.4), 0 8px 24px rgba(80,20,160,0.22), inset 0 1px 0 rgba(255,255,255,0.28);
+    }
+    .doctor-card .grad-bg {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    .grad-dini {
+      background:
+        radial-gradient(ellipse at 50% -5%, rgba(235,205,255,1) 0%, rgba(175,100,245,0.55) 35%, transparent 58%),
+        radial-gradient(ellipse at 15% 65%, rgba(155,70,235,0.45) 0%, transparent 45%),
+        radial-gradient(ellipse at 82% 80%, rgba(90,15,185,0.55) 0%, transparent 40%),
+        linear-gradient(172deg, #9B6BD4 0%, #7438B8 28%, #5A18A0 58%, #3C0882 100%);
+    }
+    .grad-jeanyvia {
+      background:
+        radial-gradient(ellipse at 50% -5%, rgba(220,180,255,1) 0%, rgba(155,70,230,0.55) 38%, transparent 60%),
+        radial-gradient(ellipse at 80% 55%, rgba(140,50,225,0.45) 0%, transparent 45%),
+        radial-gradient(ellipse at 18% 82%, rgba(75,10,175,0.55) 0%, transparent 40%),
+        linear-gradient(168deg, #A070D8 0%, #7A40BC 26%, #5E22A4 55%, #400A88 100%);
+    }
+    .grad-claudia {
+      background:
+        radial-gradient(ellipse at 50% -8%, rgba(245,215,255,1) 0%, rgba(195,120,255,0.55) 33%, transparent 56%),
+        radial-gradient(ellipse at 20% 60%, rgba(165,80,245,0.45) 0%, transparent 48%),
+        radial-gradient(ellipse at 85% 75%, rgba(100,20,200,0.55) 0%, transparent 42%),
+        linear-gradient(175deg, #A278D8 0%, #7C44BC 27%, #6220A8 56%, #420E88 100%);
+    }
+    .grad-valentina {
+      background:
+        radial-gradient(ellipse at 50% -3%, rgba(230,195,255,1) 0%, rgba(170,90,240,0.55) 36%, transparent 58%),
+        radial-gradient(ellipse at 78% 60%, rgba(145,55,230,0.45) 0%, transparent 46%),
+        radial-gradient(ellipse at 15% 78%, rgba(80,12,180,0.55) 0%, transparent 42%),
+        linear-gradient(170deg, #9C6ED8 0%, #783EBA 27%, #5C1CA2 57%, #3E0884 100%);
+    }
+    .grad-webi {
+      background:
+        radial-gradient(ellipse at 50% -6%, rgba(240,210,255,1) 0%, rgba(185,110,250,0.55) 35%, transparent 58%),
+        radial-gradient(ellipse at 22% 62%, rgba(160,75,240,0.45) 0%, transparent 46%),
+        radial-gradient(ellipse at 80% 78%, rgba(95,18,190,0.55) 0%, transparent 40%),
+        linear-gradient(173deg, #9E70D6 0%, #7B40BB 26%, #6020A5 56%, #400A86 100%);
+    }
+    .doctor-card img {
+      position: relative; z-index: 1;
+      width: 100%; aspect-ratio: 3/4;
+      object-fit: cover; object-position: center top;
+      display: block;
+    }
+    /* Per-doctor face alignment — head-to-chest framing */
+    .img-dini      { transform: scale(1.45); transform-origin: 50% 35%; }
+    .img-jeanyvia  { transform: scale(1.50) translateY(-8%); transform-origin: 50% 0%; }
+    .img-claudia   { transform: scale(1.50) translateY(-6%); transform-origin: 50% 0%; }
+    .img-valentina { transform: scale(1.35); transform-origin: 50% 18%; }
+    .img-webi      { transform: scale(1.52); transform-origin: 42% 42%; }
+    .img-dina      { transform: scale(1.20); transform-origin: 50%  6%; }
+    .img-aries     { transform: scale(1.42); transform-origin: 50%  0%; }
+    .img-kevin     { transform: scale(2.00); transform-origin: 41% 44%; }
+    .doctor-card::before {
+      content: ''; position: absolute; inset: 0; border-radius: 24px;
+      border: 1.5px solid rgba(255,255,255,0.28); z-index: 3; pointer-events: none;
+    }
+    .doctor-card .top-shine {
+      position: absolute; top: 0; left: 0; right: 0; height: 55%;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.10) 0%, transparent 100%);
+      pointer-events: none; z-index: 2; border-radius: 24px 24px 0 0;
+    }
+    .doctor-card-info {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 1.25rem;
+      background: linear-gradient(to top, rgba(25,5,70,0.96) 0%, rgba(25,5,70,0.65) 50%, transparent 100%);
+      z-index: 2;
+    }
+
+    /* ── BEFORE/AFTER SLIDER ── */
+    .ba-slider-wrap {
+      position: relative; border-radius: 20px; overflow: hidden;
+      cursor: ew-resize; user-select: none; touch-action: pan-y;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.14);
+    }
+    .ba-img-after {
+      display: block; width: 100%; height: 360px; object-fit: cover;
+    }
+    .ba-img-before {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      clip-path: inset(0 50% 0 0);
+    }
+    .ba-label {
+      position: absolute; top: 12px;
+      padding: 4px 12px; border-radius: 999px;
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      pointer-events: none;
+    }
+    .ba-label-l { left: 12px; background: rgba(0,0,0,0.45); color: rgba(255,255,255,0.85); }
+    .ba-label-r { right: 12px; background: rgba(153,102,204,0.85); color: #fff; }
+    .ba-handle {
+      position: absolute; top: 0; bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 3px; background: rgba(255,255,255,0.92);
+      pointer-events: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    }
+    .ba-handle-knob {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--purple-dark);
+    }
+
+    /* ── OPENING HOURS PILL ── */
+    .hours-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 22px; border-radius: 999px;
+      background: rgba(153,102,204,0.1);
+      border: 1px solid rgba(153,102,204,0.22);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- ══════════════════════ NAVBAR ══════════════════════ -->
+<nav id="navbar">
+  <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3" style="text-decoration:none;">
+      <div style="width:46px;height:46px;display:flex;align-items:center;justify-content:center;">
+        <img src="87069801-a8a8-498c-bb68-bb15550632aa_removalai_preview.png" alt="Palupi Dental Care" style="width:46px;height:46px;object-fit:contain;" />
+      </div>
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--purple-deep);line-height:1.1;">Palupi</div>
+        <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.1em;color:var(--purple);line-height:1.1;">DENTAL CARE</div>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div id="desktop-nav" class="hidden md:flex items-center gap-2" style="position:relative;padding:4px;">
+      <div id="nav-pill"></div>
+      <a href="#about" class="nav-link" style="padding:6px 14px;">Tentang Kami</a>
+      <a href="#doctors" class="nav-link" style="padding:6px 14px;">Tim Dokter</a>
+      <a href="#services" class="nav-link" style="padding:6px 14px;">Layanan</a>
+      <a href="#results" class="nav-link" style="padding:6px 14px;">Hasil</a>
+      <a href="#testimonials" class="nav-link" style="padding:6px 14px;">Testimoni</a>
+      <a href="#locations" class="nav-link" style="padding:6px 14px;">Lokasi</a>
+    </div>
+
+    <!-- CTA -->
+    <a href="https://wa.me/628135002919" target="_blank" class="btn-primary hidden md:inline-flex" style="padding:10px 22px;font-size:0.82rem;">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.11 1.524 5.833L0 24l6.341-1.498A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.927 0-3.742-.518-5.307-1.422l-.38-.225-3.766.89.947-3.666-.248-.388A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Hubungi Kami
+    </a>
+
+    <!-- Hamburger -->
+    <button id="hamburger" class="md:hidden p-2 rounded-lg" style="color:var(--purple-dark);background:none;border:none;cursor:pointer;">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" style="background:#fff;border-top:1px solid rgba(155,118,181,0.1);">
+    <div style="padding:1rem 1.25rem;display:flex;flex-direction:column;gap:1rem;">
+      <a href="#about" class="nav-link" onclick="closeMM()">Tentang Kami</a>
+      <a href="#doctors" class="nav-link" onclick="closeMM()">Tim Dokter</a>
+      <a href="#services" class="nav-link" onclick="closeMM()">Layanan</a>
+      <a href="#results" class="nav-link" onclick="closeMM()">Hasil</a>
+      <a href="#testimonials" class="nav-link" onclick="closeMM()">Testimoni</a>
+      <a href="#locations" class="nav-link" onclick="closeMM()">Lokasi</a>
+      <a href="https://wa.me/628135002919" target="_blank" class="btn-primary" style="justify-content:center;">Hubungi Kami</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════ HERO ══════════════════════ -->
+<section id="hero" style="min-height:100vh;background:linear-gradient(150deg,#4A1A88 0%,#6B30A8 35%,#8C55C0 65%,#A870CC 100%);position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+
+  <!-- ── Ethereal Shadow Background Animation ── -->
+  <svg id="ethereal-svg" style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true">
+    <defs>
+      <filter id="ethereal-filter" x="-50%" y="-50%" width="200%" height="200%">
+        <feTurbulence id="ethereal-turbulence" result="undulation" numOctaves="2" baseFrequency="0.0005,0.002" seed="0" type="turbulence"/>
+        <feColorMatrix id="ethereal-hue" in="undulation" type="hueRotate" values="180"/>
+        <feColorMatrix in="dist" result="circulation" type="matrix" values="4 0 0 0 1  4 0 0 0 1  4 0 0 0 1  1 0 0 0 0"/>
+        <feDisplacementMap in="SourceGraphic" in2="circulation" scale="100" result="dist"/>
+        <feDisplacementMap in="dist" in2="undulation" scale="100" result="output"/>
+      </filter>
+    </defs>
+  </svg>
+  <div style="position:absolute;inset:-100px;filter:url(#ethereal-filter) blur(4px);z-index:0;pointer-events:none;opacity:0.5;">
+    <div style="
+      background-color:rgba(210,160,255,0.75);
+      -webkit-mask-image:url('https://framerusercontent.com/images/ceBGguIpUU8luwByxuQz79t7To.png');
+      mask-image:url('https://framerusercontent.com/images/ceBGguIpUU8luwByxuQz79t7To.png');
+      -webkit-mask-size:cover;mask-size:cover;
+      -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+      -webkit-mask-position:center;mask-position:center;
+      width:100%;height:100%;
+    "></div>
+  </div>
+
+  <!-- ── Lamp effects (top, full width) ── -->
+  <div style="position:absolute;top:0;left:0;right:0;height:280px;pointer-events:none;z-index:1;overflow:hidden;">
+    <div class="lamp-beam-l"></div>
+    <div class="lamp-beam-r"></div>
+    <div class="lamp-line"></div>
+    <div class="lamp-glow-top"></div>
+    <div class="lamp-glow-mid"></div>
+  </div>
+
+  <!-- ── Decorative orbs ── -->
+  <div style="position:absolute;top:-80px;left:-80px;width:400px;height:400px;border-radius:50%;background:rgba(180,120,255,0.15);filter:blur(80px);pointer-events:none;z-index:0;"></div>
+  <div style="position:absolute;bottom:-100px;right:-100px;width:450px;height:450px;border-radius:50%;background:rgba(140,80,220,0.12);filter:blur(90px);pointer-events:none;z-index:0;"></div>
+
+  <!-- ── Centered content ── -->
+  <div id="hero-content" style="position:relative;z-index:2;width:100%;max-width:860px;margin:0 auto;padding:9rem 2rem 5rem;text-align:center;display:flex;flex-direction:column;align-items:center;">
+
+    <!-- Badge -->
+    <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:2.5rem;padding:6px 18px;border-radius:999px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);animation:hero-sub-up 0.7s ease-out 0.2s both;">
+      <span style="width:7px;height:7px;border-radius:50%;background:#4ade80;display:inline-block;flex-shrink:0;box-shadow:0 0 8px rgba(74,222,128,0.6);"></span>
+      <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.75)" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+      <span style="color:rgba(255,255,255,0.88);font-size:0.78rem;font-weight:500;">Tersedia di 2 Cabang — Samarinda</span>
+    </div>
+
+    <!-- Main heading with lamp animation -->
+    <h1 style="line-height:1;margin-bottom:1rem;animation:hero-title-up 1s cubic-bezier(0.16,1,0.3,1) 0.4s both;">
+      <span style="display:block;font-family:'Playfair Display',serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:700;color:#fff;letter-spacing:-0.02em;text-shadow:0 4px 60px rgba(180,130,255,0.4),0 2px 20px rgba(0,0,0,0.2);">Palupi</span>
+      <span style="display:block;font-family:'Playfair Display',serif;font-size:clamp(0.9rem,2.5vw,2rem);font-weight:500;color:rgba(235,210,255,0.92);letter-spacing:0.3em;margin-top:0.5rem;text-shadow:0 2px 20px rgba(180,130,255,0.3);">DENTAL CARE</span>
+    </h1>
+
+    <!-- Divider line -->
+    <div style="width:60px;height:2px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.6),transparent);margin:1.5rem auto;border-radius:2px;animation:hero-sub-up 0.8s ease-out 0.6s both;"></div>
+
+    <!-- Rotating slogans -->
+    <div style="min-height:4rem;position:relative;width:100%;max-width:640px;animation:hero-sub-up 0.8s ease-out 0.7s both;margin-bottom:2.5rem;display:flex;align-items:center;justify-content:center;">
+      <p id="slogan-text" style="color:rgba(255,255,255,0.78);font-size:clamp(0.88rem,1.8vw,1.05rem);line-height:1.65;font-weight:300;text-align:center;margin:0;"></p>
+    </div>
+
+    <!-- CTA buttons -->
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-bottom:3rem;animation:hero-sub-up 0.8s ease-out 0.85s both;">
+      <a href="https://wa.me/628135002919" target="_blank" class="btn-primary" style="background:#fff;color:var(--purple-deep);padding:14px 32px;font-size:0.95rem;box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+        Learn More
+      </a>
+      <a href="#doctors" class="btn-outline" style="padding:14px 32px;font-size:0.95rem;">
+        Kenali Tim Dokter
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+
+    <!-- Mini stats -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:0;border-top:1px solid rgba(255,255,255,0.15);padding-top:2rem;animation:hero-sub-up 0.8s ease-out 1s both;">
+      <div style="padding:0 2rem;">
+        <div id="hero-pasien" style="font-size:1.9rem;font-weight:700;font-family:'Playfair Display',serif;color:#fff;line-height:1;" data-hero-target="5000" data-hero-suffix="+">0+</div>
+        <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);margin-top:5px;font-weight:500;letter-spacing:0.06em;">Pasien Puas</div>
+      </div>
+      <div style="width:1px;height:2.5rem;background:rgba(255,255,255,0.2);flex-shrink:0;"></div>
+      <div style="padding:0 2rem;">
+        <div style="font-size:1.9rem;font-weight:700;font-family:'Playfair Display',serif;color:#F59E0B;line-height:1;">5.0 ★</div>
+        <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);margin-top:5px;font-weight:500;letter-spacing:0.06em;">Google Rating</div>
+      </div>
+      <div style="width:1px;height:2.5rem;background:rgba(255,255,255,0.2);flex-shrink:0;"></div>
+      <div style="padding:0 2rem;">
+        <div style="font-size:1.9rem;font-weight:700;font-family:'Playfair Display',serif;color:#fff;line-height:1;">2</div>
+        <div style="font-size:0.7rem;color:rgba(255,255,255,0.5);margin-top:5px;font-weight:500;letter-spacing:0.06em;">Cabang</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scroll indicator -->
+  <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:scroll-bounce 1.8s ease-in-out infinite;z-index:10;">
+    <span style="font-size:0.6rem;letter-spacing:0.18em;font-weight:600;color:rgba(255,255,255,0.35);">SCROLL</span>
+    <svg width="18" height="18" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════ STATS ══════════════════════ -->
+<section style="background:var(--light);border-bottom:1px solid rgba(155,118,181,0.1);padding:4rem 0;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-3 gap-10">
+      <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-num" data-target="5000" data-suffix="+">0+</div>
+        <div style="font-size:0.85rem;font-weight:500;color:var(--purple-dark);margin-top:4px;">Pasien Puas</div>
+      </div>
+      <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-num" data-target="10" data-suffix="+">0+</div>
+        <div style="font-size:0.85rem;font-weight:500;color:var(--purple-dark);margin-top:4px;">Jenis Treatment</div>
+      </div>
+      <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-num" data-target="2" data-suffix="">0</div>
+        <div style="font-size:0.85rem;font-weight:500;color:var(--purple-dark);margin-top:4px;">Cabang di Samarinda</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════ ABOUT ══════════════════════ -->
+<section id="about" style="padding:7rem 0;background:linear-gradient(160deg,#faf8ff 0%,#f3eeff 50%,#ede4fb 100%);position:relative;overflow:hidden;">
+
+  <!-- Decorative blobs -->
+  <div style="position:absolute;top:-80px;left:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(155,118,181,0.13) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-60px;right:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(122,84,153,0.1) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(155,118,181,0.06) 0%,transparent 65%);pointer-events:none;"></div>
+
+  <div class="max-w-7xl mx-auto px-6" style="position:relative;z-index:1;">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+      <!-- Text -->
+      <div data-aos="fade-right">
+        <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;background:rgba(122,84,153,0.1);border:1px solid rgba(122,84,153,0.2);margin-bottom:1.5rem;">
+          <div style="width:6px;height:6px;border-radius:50%;background:var(--purple-dark);"></div>
+          <span style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;color:var(--purple-dark);text-transform:uppercase;">Tentang Kami</span>
+        </div>
+
+        <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;line-height:1.15;margin-bottom:1.5rem;color:var(--dark);">
+          Klinik yang Hadir<br/>dengan Tulus untuk<br/>
+          <span style="background:linear-gradient(135deg,var(--purple-dark) 0%,#a855f7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Senyum Kamu.</span>
+        </h2>
+
+        <p style="color:#5A5070;line-height:1.8;margin-bottom:1rem;font-size:1.02rem;">
+          Palupi Dental Care berdiri dengan satu prinsip sederhana — setiap orang berhak mendapatkan perawatan gigi yang nyaman, terjangkau, dan dilakukan dengan sepenuh hati.
+        </p>
+        <p style="color:#5A5070;line-height:1.8;margin-bottom:2rem;">
+          Dengan tim dokter gigi berpengalaman dan fasilitas modern, kami melayani ribuan pasien dari berbagai kalangan di Samarinda. Dari konsultasi pertama hingga hasil akhir, kami pastikan kamu merasa aman dan puas di setiap langkahnya.
+        </p>
+
+        <!-- Stats row -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem;padding:1.25rem;background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);border-radius:20px;border:1px solid rgba(155,118,181,0.18);box-shadow:0 4px 24px rgba(122,84,153,0.08);">
+          <div style="text-align:center;padding:0.5rem;">
+            <div style="font-size:1.6rem;font-weight:800;color:var(--purple-dark);line-height:1;">3000+</div>
+            <div style="font-size:0.72rem;color:#7A6090;margin-top:4px;line-height:1.4;">Pasien<br/>Dilayani</div>
+          </div>
+          <div style="text-align:center;padding:0.5rem;border-left:1px solid rgba(155,118,181,0.2);border-right:1px solid rgba(155,118,181,0.2);">
+            <div style="font-size:1.6rem;font-weight:800;color:var(--purple-dark);line-height:1;">10+</div>
+            <div style="font-size:0.72rem;color:#7A6090;margin-top:4px;line-height:1.4;">Tahun<br/>Pengalaman</div>
+          </div>
+          <div style="text-align:center;padding:0.5rem;">
+            <div style="font-size:1.6rem;font-weight:800;color:var(--purple-dark);line-height:1;">5.0</div>
+            <div style="font-size:0.72rem;color:#7A6090;margin-top:4px;line-height:1.4;">Rating<br/>Google</div>
+          </div>
+        </div>
+
+        <!-- Checklist items -->
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(8px);border-radius:14px;border:1px solid rgba(155,118,181,0.14);transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(122,84,153,0.12)'" onmouseout="this.style.boxShadow='none'">
+            <div style="width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,rgba(122,84,153,0.18),rgba(168,85,247,0.14));display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color:var(--purple-dark);"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span style="font-size:0.88rem;font-weight:500;color:#3D2960;">Dokter gigi berpengalaman &amp; bersertifikat</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(8px);border-radius:14px;border:1px solid rgba(155,118,181,0.14);transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(122,84,153,0.12)'" onmouseout="this.style.boxShadow='none'">
+            <div style="width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,rgba(122,84,153,0.18),rgba(168,85,247,0.14));display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color:var(--purple-dark);"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span style="font-size:0.88rem;font-weight:500;color:#3D2960;">Peralatan modern, bersih, dan steril</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(8px);border-radius:14px;border:1px solid rgba(155,118,181,0.14);transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(122,84,153,0.12)'" onmouseout="this.style.boxShadow='none'">
+            <div style="width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,rgba(122,84,153,0.18),rgba(168,85,247,0.14));display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color:var(--purple-dark);"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span style="font-size:0.88rem;font-weight:500;color:#3D2960;">Suasana klinik yang nyaman &amp; ramah anak</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:12px 16px;background:rgba(255,255,255,0.65);backdrop-filter:blur(8px);border-radius:14px;border:1px solid rgba(155,118,181,0.14);transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 20px rgba(122,84,153,0.12)'" onmouseout="this.style.boxShadow='none'">
+            <div style="width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,rgba(122,84,153,0.18),rgba(168,85,247,0.14));display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="color:var(--purple-dark);"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span style="font-size:0.88rem;font-weight:500;color:#3D2960;">Harga terjangkau, kualitas tidak pernah kompromi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doctor Photo -->
+      <div id="about-photo-wrap" data-aos="fade-left" style="position:relative;padding:1.5rem 0 1.5rem 1.5rem;">
+
+        <!-- Accent block behind photo (offset top-right) -->
+        <div style="position:absolute;top:0;right:0;width:88%;height:92%;border-radius:28px;background:linear-gradient(145deg,#7a4499 0%,#9b52c8 50%,#b06de0 100%);z-index:0;"></div>
+
+        <!-- Dot pattern overlay on accent block -->
+        <div style="position:absolute;top:0;right:0;width:88%;height:92%;border-radius:28px;z-index:1;opacity:0.18;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:20px 20px;"></div>
+
+        <!-- Photo -->
+        <div style="position:relative;z-index:2;border-radius:22px;overflow:hidden;box-shadow:0 24px 64px rgba(30,10,60,0.22);">
+          <img src="upscalemedia-transformed.jpeg" alt="drg. Palupi" style="width:100%;display:block;" />
+
+          <!-- Subtle top-left badge -->
+          <div style="position:absolute;top:1rem;left:1rem;display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:8px;background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.22);">
+            <div style="width:5px;height:5px;border-radius:50%;background:#c4b5fd;animation:pulse 2s infinite;"></div>
+            <span style="font-size:0.62rem;font-weight:700;letter-spacing:0.1em;color:#fff;text-transform:uppercase;">Dokter Kami</span>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════ TIM DOKTER ══════════════════════ -->
+<section id="doctors" style="padding:6rem 0;background:linear-gradient(160deg,#EDE4F8 0%,#D8C4F0 35%,#C8AAED 65%,#B890D8 100%);position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;background:rgba(119,68,170,0.12);filter:blur(60px);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-80px;left:-80px;width:350px;height:350px;border-radius:50%;background:rgba(119,68,170,0.1);filter:blur(70px);pointer-events:none;"></div>
+
+  <div class="max-w-7xl mx-auto px-6" style="position:relative;z-index:1;">
+    <div class="text-center" style="margin-bottom:3.5rem;" data-aos="fade-up">
+      <span class="section-label" style="background:rgba(119,68,170,0.14);color:#5533AA;">Tim Dokter Kami</span>
+      <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--dark);margin-top:0.5rem;line-height:1.2;">
+        Ditangani oleh<br/>
+        <span style="color:#6633AA;">Dokter yang Berpengalaman.</span>
+      </h2>
+      <p style="color:#6A5080;margin-top:1rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;font-size:0.95rem;">
+        Tim dokter gigi kami berkomitmen memberikan perawatan terbaik dengan keahlian dan ketulusan untuk setiap pasien.
+      </p>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;max-width:872px;margin:0 auto;">
+
+      <div class="doctor-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="top-shine"></div>
+        <img src="Dini Nawang Palupi,drg.png" alt="drg. Dini Nawang Palupi" loading="lazy" class="img-dini" />
+        <div class="doctor-card-info">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;color:#fff;line-height:1.3;">drg. Dini Nawang Palupi</div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="top-shine"></div>
+        <img src="Jeanyvia Anggreyni S.,drg.png" alt="drg. Jeanyvia Anggreyni S." loading="lazy" class="img-jeanyvia" />
+        <div class="doctor-card-info">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;color:#fff;line-height:1.3;">drg. Jeanyvia Anggreyni S.</div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="top-shine"></div>
+        <img src="Claudia Gunawan, drg.png" alt="drg. Claudia Gunawan" loading="lazy" class="img-claudia" />
+        <div class="doctor-card-info">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;color:#fff;line-height:1.3;">drg. Claudia Gunawan</div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-aos="fade-up" data-aos-delay="180">
+        <div class="top-shine"></div>
+        <img src="Valentina, drg.png" alt="drg. Valentina" loading="lazy" class="img-valentina" />
+        <div class="doctor-card-info">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;color:#fff;line-height:1.3;">drg. Valentina</div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="top-shine"></div>
+        <img src="Webi Paramastri P.,drg.png" alt="drg. Webi Paramastri P." loading="lazy" class="img-webi" />
+        <div class="doctor-card-info">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;color:#fff;line-height:1.3;">drg. Webi Paramastri P.</div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="top-shine"></div>
+        <img src="Dina Yona, drg.png" alt="drg. Dina Yona" loading="lazy" class="img-dina" />
+        <div class="doctor-card-info">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;color:#fff;line-height:1.3;">drg. Dina Yona</div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-aos="fade-up" data-aos-delay="360">
+        <div class="top-shine"></div>
+        <img src="Aries Kurniawan, drg.png" alt="drg. Aries Kurniawan" loading="lazy" class="img-aries" />
+        <div class="doctor-card-info">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;color:#fff;line-height:1.3;">drg. Aries Kurniawan</div>
+        </div>
+      </div>
+
+      <div class="doctor-card" data-aos="fade-up" data-aos-delay="420">
+        <div class="top-shine"></div>
+        <img src="Kevin Septian, drg.png" alt="drg. Kevin Septian" loading="lazy" class="img-kevin" />
+        <div class="doctor-card-info">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;color:#fff;line-height:1.3;">drg. Kevin Septian</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════ SERVICES ══════════════════════ -->
+<section id="services" style="padding:6rem 0;background:var(--light);">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center" style="margin-bottom:4rem;" data-aos="fade-up">
+      <span class="section-label">Layanan Kami</span>
+      <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--dark);margin-top:0.5rem;line-height:1.2;">
+        Semua yang Gigi Kamu<br/>
+        <span style="color:var(--purple-dark);">Butuhkan, Ada di Sini.</span>
+      </h2>
+      <p style="color:#7A7090;margin-top:1rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;font-size:0.95rem;">
+        Dari perawatan rutin hingga estetik, kami siap membantu kamu mendapatkan senyum yang sehat dan percaya diri.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0" onclick="openServiceModal('scaling')">
+        <div class="icon-circle" style="background:rgba(155,118,181,0.14);">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="color:var(--purple-dark);"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        </div>
+        <h4 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;color:var(--dark);">Scaling &amp; Pembersihan</h4>
+        <p style="font-size:0.78rem;color:#8070A0;line-height:1.65;">Bersihkan karang gigi dan plak untuk mulut yang lebih sehat dan segar.</p>
+        <div class="service-card-hint">Pelajari lebih lanjut <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="60" onclick="openServiceModal('kawat')">
+        <div class="icon-circle" style="background:rgba(139,34,82,0.1);">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="color:var(--maroon);"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/></svg>
+        </div>
+        <h4 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;color:var(--dark);">Kawat Gigi</h4>
+        <p style="font-size:0.78rem;color:#8070A0;line-height:1.65;">Rapikan susunan gigi dengan bracket berkualitas — metal maupun keramik.</p>
+        <div class="service-card-hint">Pelajari lebih lanjut <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="120" onclick="openServiceModal('veneer')">
+        <div class="icon-circle" style="background:rgba(155,118,181,0.14);">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="color:var(--purple-dark);"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+        </div>
+        <h4 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;color:var(--dark);">Veneer</h4>
+        <p style="font-size:0.78rem;color:#8070A0;line-height:1.65;">Tampilan gigi yang sempurna dengan lapisan porselen tipis yang natural.</p>
+        <div class="service-card-hint">Pelajari lebih lanjut <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="180" onclick="openServiceModal('bleaching')">
+        <div class="icon-circle" style="background:rgba(245,158,11,0.1);">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="color:#D97706;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+        </div>
+        <h4 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;color:var(--dark);">Bleaching / Whitening</h4>
+        <p style="font-size:0.78rem;color:#8070A0;line-height:1.65;">Cerahkan warna gigi secara aman dan efektif dalam satu kali kunjungan.</p>
+        <div class="service-card-hint">Pelajari lebih lanjut <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0" onclick="openServiceModal('implan')">
+        <div class="icon-circle" style="background:rgba(16,185,129,0.1);">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="color:#059669;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+        </div>
+        <h4 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;color:var(--dark);">Implan Gigi</h4>
+        <p style="font-size:0.78rem;color:#8070A0;line-height:1.65;">Solusi permanen untuk gigi yang hilang — terlihat dan terasa seperti asli.</p>
+        <div class="service-card-hint">Pelajari lebih lanjut <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="60" onclick="openServiceModal('cabut')">
+        <div class="icon-circle" style="background:rgba(239,68,68,0.08);">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="color:#DC2626;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126z"/></svg>
+        </div>
+        <h4 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;color:var(--dark);">Cabut Gigi</h4>
+        <p style="font-size:0.78rem;color:#8070A0;line-height:1.65;">Prosedur pencabutan yang cepat, minim rasa sakit, dan aman untuk semua usia.</p>
+        <div class="service-card-hint">Pelajari lebih lanjut <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="120" onclick="openServiceModal('tambal')">
+        <div class="icon-circle" style="background:rgba(155,118,181,0.14);">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="color:var(--purple-dark);"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z"/></svg>
+        </div>
+        <h4 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;color:var(--dark);">Tambal Gigi</h4>
+        <p style="font-size:0.78rem;color:#8070A0;line-height:1.65;">Restorasi gigi berlubang dengan bahan komposit sewarna gigi yang alami.</p>
+        <div class="service-card-hint">Pelajari lebih lanjut <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></div>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="180" onclick="openServiceModal('psa')">
+        <div class="icon-circle" style="background:rgba(99,102,241,0.1);">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="color:#4338CA;"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+        </div>
+        <h4 style="font-weight:700;font-size:0.95rem;margin-bottom:6px;color:var(--dark);">Perawatan Saluran Akar</h4>
+        <p style="font-size:0.78rem;color:#8070A0;line-height:1.65;">Selamatkan gigi dari infeksi dalam dengan prosedur yang tepat dan hati-hati.</p>
+        <div class="service-card-hint">Pelajari lebih lanjut <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ══════════════════════ HASIL TREATMENT ══════════════════════ -->
+<section id="results" style="padding:5rem 0;background:#fff;overflow:hidden;">
+  <div class="max-w-7xl mx-auto px-6 text-center" style="margin-bottom:2.5rem;" data-aos="fade-up">
+    <span class="section-label">Hasil Treatment</span>
+    <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--dark);margin-top:0.5rem;line-height:1.2;">
+      Transformasi Nyata,<br/>
+      <span style="color:var(--purple-dark);">Senyum yang Berubah.</span>
+    </h2>
+    <p style="color:#7A7090;margin-top:1rem;font-size:0.95rem;max-width:460px;margin-left:auto;margin-right:auto;">
+      Lihat sendiri hasil perawatan nyata dari pasien-pasien kami yang sudah merasakan manfaatnya.
+    </p>
+  </div>
+
+  <!-- Auto-scroll strip -->
+  <div class="img-strip-outer" style="padding:0.5rem 0;">
+    <div class="img-strip-inner">
+      <!-- Set A -->
+      <div class="img-strip-item"><img src="+1.png" alt="Hasil Treatment 1" /></div>
+      <div class="img-strip-item"><img src="+2.png" alt="Hasil Treatment 2" /></div>
+      <div class="img-strip-item"><img src="+3.png" alt="Hasil Treatment 3" /></div>
+      <div class="img-strip-item"><img src="Brand Assets/bridge.png" alt="Bridge Treatment" /></div>
+      <div class="img-strip-item"><img src="Brand Assets/bridge 2.png" alt="Bridge Treatment 2" /></div>
+      <!-- Set B (duplicate for seamless loop) -->
+      <div class="img-strip-item"><img src="+1.png" alt="Hasil Treatment 1" /></div>
+      <div class="img-strip-item"><img src="+2.png" alt="Hasil Treatment 2" /></div>
+      <div class="img-strip-item"><img src="+3.png" alt="Hasil Treatment 3" /></div>
+      <div class="img-strip-item"><img src="Brand Assets/bridge.png" alt="Bridge Treatment" /></div>
+      <div class="img-strip-item"><img src="Brand Assets/bridge 2.png" alt="Bridge Treatment 2" /></div>
+    </div>
+  </div>
+
+  <!-- Instagram CTA -->
+  <div style="text-align:center;margin-top:2rem;" data-aos="fade-up">
+    <a href="https://www.instagram.com/palupidentalcare" target="_blank" rel="noopener noreferrer"
+       style="display:inline-flex;align-items:center;gap:0.6rem;padding:0.75rem 1.75rem;border-radius:999px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff;font-weight:600;font-size:0.95rem;text-decoration:none;box-shadow:0 4px 15px rgba(131,58,180,0.35);transition:transform 0.2s,box-shadow 0.2s;"
+       onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(131,58,180,0.45)'"
+       onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 15px rgba(131,58,180,0.35)'">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      Lihat lebih banyak di Instagram
+    </a>
+  </div>
+</section>
+
+
+<!-- ══════════════════════ TESTIMONIALS ══════════════════════ -->
+<section id="testimonials" style="padding:6rem 0;background:var(--light);overflow:hidden;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center" style="margin-bottom:3.5rem;" data-aos="fade-up">
+      <span class="section-label">Apa Kata Mereka</span>
+      <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--dark);margin-top:0.5rem;line-height:1.2;">
+        Kepercayaan yang<br/>
+        <span style="color:var(--purple-dark);">Jadi Kebanggaan Kami.</span>
+      </h2>
+      <p style="color:#7A7090;margin-top:1rem;font-size:0.95rem;">Bukan kami yang bilang — tapi mereka yang sudah merasakannya sendiri.</p>
+    </div>
+  </div>
+
+  <!-- Scrolling columns — mask fade top & bottom -->
+  <div style="display:flex;justify-content:center;gap:1.25rem;max-height:720px;overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,transparent,black 12%,black 88%,transparent);mask-image:linear-gradient(to bottom,transparent,black 12%,black 88%,transparent);padding:0 1.5rem;">
+
+    <!-- Column 1 (always visible) -->
+    <div style="flex:0 0 300px;max-width:300px;" class="testi-col-wrap">
+      <div class="testi-col-inner" style="--dur:18s;">
+        <!-- set A -->
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Pelayanan baik, sabar dan ramah sekali. Tidak membuat trauma untuk anak kami. Harga terjangkau dengan peralatan yang canggih."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#6B4A8B);">R</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">RumahQias Store</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Tempatnya nyaman, bersih, tidak lama mengantri. Pengerjaannya rapi dan hasilnya memuaskan."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#059669,#34D399);">B</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Beti Taufik Channel</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Dokter dan pelayanan sangat ramah. Rekomendasi banget, apalagi untuk anak-anak — sangat sabar dan tidak bikin takut."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#6B4A8B);">A</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Alisha Arlin</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <!-- set B (duplicate for loop) -->
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Pelayanan baik, sabar dan ramah sekali. Tidak membuat trauma untuk anak kami. Harga terjangkau dengan peralatan yang canggih."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#6B4A8B);">R</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">RumahQias Store</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Tempatnya nyaman, bersih, tidak lama mengantri. Pengerjaannya rapi dan hasilnya memuaskan."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#059669,#34D399);">B</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Beti Taufik Channel</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Dokter dan pelayanan sangat ramah. Rekomendasi banget, apalagi untuk anak-anak — sangat sabar dan tidak bikin takut."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#6B4A8B);">A</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Alisha Arlin</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+      </div>
+    </div>
+
+    <!-- Column 2 (hidden on mobile) -->
+    <div style="flex:0 0 300px;max-width:300px;" class="testi-col-wrap hidden md:block">
+      <div class="testi-col-inner" style="--dur:22s;">
+        <!-- set A -->
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"I visited Palupi 3 times and was impressed every single time by their attention to patients, positive energy, and professionalism."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#8B2252,#C2185B);">A</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Al D</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Sangat ramah, pelayanannya memuaskan dan hasilnya pun sangat rapi. Tidak menyesal memilih di sini."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#8B2252);">W</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Winda Yunita</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Dokter dan perawat sangat baik, sabar dan telaten. Sangat rekomen untuk siapa pun yang ingin berobat di sini."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#C5A0D8);">P</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Putri Nur Arlin</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <!-- set B (duplicate for loop) -->
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"I visited Palupi 3 times and was impressed every single time by their attention to patients, positive energy, and professionalism."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#8B2252,#C2185B);">A</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Al D</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Sangat ramah, pelayanannya memuaskan dan hasilnya pun sangat rapi. Tidak menyesal memilih di sini."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#8B2252);">W</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Winda Yunita</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Dokter dan perawat sangat baik, sabar dan telaten. Sangat rekomen untuk siapa pun yang ingin berobat di sini."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#C5A0D8);">P</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Putri Nur Arlin</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+      </div>
+    </div>
+
+    <!-- Column 3 (visible on lg+) -->
+    <div style="flex:0 0 300px;max-width:300px;" class="testi-col-wrap hidden lg:block">
+      <div class="testi-col-inner" style="--dur:20s;">
+        <!-- set A -->
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Dokternya ramah, baik, dan pelayanannya bagus. Fasilitasnya lengkap dan harga terjangkau dibanding tempat lain."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#4A3060,#7A5499);">A</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Agung Adi Saputra</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Dokter dan staff sangat baik dan ramah. Pelayanan profesional, tempat parkir luas. Sangat recommended!"</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#D97706,#F59E0B);">I</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Ibnu Sholichudin</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Pelayanan baik, sabar dan ramah sekali. Tidak membuat trauma untuk anak kami. Harga terjangkau dengan peralatan yang canggih."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#6B4A8B);">R</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">RumahQias Store</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <!-- set B (duplicate for loop) -->
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Dokternya ramah, baik, dan pelayanannya bagus. Fasilitasnya lengkap dan harga terjangkau dibanding tempat lain."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#4A3060,#7A5499);">A</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Agung Adi Saputra</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Dokter dan staff sangat baik dan ramah. Pelayanan profesional, tempat parkir luas. Sangat recommended!"</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#D97706,#F59E0B);">I</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">Ibnu Sholichudin</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+        <div class="testimonial-card"><div class="stars" style="font-size:0.85rem;margin-bottom:10px;">★★★★★</div><p style="color:#4A3060;font-size:0.85rem;line-height:1.75;flex:1;">"Pelayanan baik, sabar dan ramah sekali. Tidak membuat trauma untuk anak kami. Harga terjangkau dengan peralatan yang canggih."</p><div style="display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(155,118,181,0.12);"><div class="avatar" style="background:linear-gradient(135deg,#9B76B5,#6B4A8B);">R</div><div><div style="font-weight:600;font-size:0.83rem;color:var(--dark);">RumahQias Store</div><div style="font-size:0.71rem;color:#A090C0;">Google Review</div></div></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════ LOCATIONS ══════════════════════ -->
+<section id="locations" style="padding:6rem 0;background:#fff;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center" style="margin-bottom:4rem;" data-aos="fade-up">
+      <span class="section-label">Temukan Kami</span>
+      <h2 style="font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:var(--dark);margin-top:0.5rem;line-height:1.2;">
+        Dua Cabang,<br/>
+        <span style="color:var(--purple-dark);">Satu Komitmen.</span>
+      </h2>
+      <p style="color:#7A7090;margin-top:1rem;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.7;font-size:0.95rem;">
+        Hadir di dua titik strategis di Samarinda agar perawatan gigi terbaik mudah dijangkau oleh semua orang.
+      </p>
+
+      <!-- Opening Hours -->
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2rem;">
+        <div class="hours-pill" data-aos="fade-up" data-aos-delay="0">
+          <svg width="18" height="18" fill="none" stroke="var(--purple-dark)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/></svg>
+          <div>
+            <div style="font-size:0.7rem;font-weight:700;color:var(--purple-dark);letter-spacing:0.08em;text-transform:uppercase;">Jam Operasional</div>
+            <div style="font-size:0.95rem;font-weight:600;color:var(--dark);margin-top:2px;">Senin – Sabtu</div>
+            <div style="font-size:1.05rem;font-weight:700;color:var(--purple-dark);">09.00 – 21.30 WIB</div>
+          </div>
+        </div>
+        <div class="hours-pill" data-aos="fade-up" data-aos-delay="80">
+          <svg width="18" height="18" fill="none" stroke="#DC2626" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 9l-6 6M9 9l6 6"/></svg>
+          <div>
+            <div style="font-size:0.7rem;font-weight:700;color:#DC2626;letter-spacing:0.08em;text-transform:uppercase;">Hari Libur</div>
+            <div style="font-size:0.95rem;font-weight:600;color:var(--dark);margin-top:2px;">Minggu</div>
+            <div style="font-size:1.05rem;font-weight:700;color:#DC2626;">Tutup</div>
+          </div>
+        </div>
+        <div class="hours-pill" data-aos="fade-up" data-aos-delay="160">
+          <svg width="18" height="18" fill="none" stroke="#25D366" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.11 1.524 5.833L0 24l6.341-1.498A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          <div>
+            <div style="font-size:0.7rem;font-weight:700;color:#059669;letter-spacing:0.08em;text-transform:uppercase;">Booking & Info</div>
+            <div style="font-size:0.95rem;font-weight:600;color:var(--dark);margin-top:2px;">WhatsApp</div>
+            <div style="font-size:1.05rem;font-weight:700;color:#059669;">+62813 5002 9191</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Branch 1 -->
+      <div class="location-card" data-aos="fade-right">
+        <iframe src="https://maps.google.com/maps?q=Jalan+Ahmad+Yani+1+No.43B+Samarinda+Kalimantan+Timur&output=embed"
+          width="100%" height="260" style="border:0;display:block;" allowfullscreen loading="lazy"></iframe>
+        <div style="padding:1.5rem;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:40px;height:40px;border-radius:12px;background:rgba(155,118,181,0.14);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:var(--purple-dark);"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            </div>
+            <div style="flex:1;">
+              <span style="display:inline-block;font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(155,118,181,0.12);color:var(--purple-dark);margin-bottom:6px;letter-spacing:0.05em;">CABANG 1</span>
+              <h4 style="font-weight:700;font-size:1.05rem;color:var(--dark);margin-bottom:4px;">Palupi Dental Care</h4>
+              <p style="font-size:0.85rem;color:#8070A0;margin-bottom:1rem;">Jl. Ahmad Yani 1 No.43B, Samarinda</p>
+              <a href="https://maps.app.goo.gl/TpyN1FfRBs1jszbNA" target="_blank"
+                style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;font-weight:600;color:var(--purple-dark);text-decoration:none;transition:opacity 0.2s;" onmouseover="this.style.opacity=0.65" onmouseout="this.style.opacity=1">
+                Buka di Google Maps
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Branch 2 -->
+      <div class="location-card" data-aos="fade-left">
+        <iframe src="https://maps.google.com/maps?q=Jalan+Merdeka+No.20A+Samarinda+Kalimantan+Timur&output=embed"
+          width="100%" height="260" style="border:0;display:block;" allowfullscreen loading="lazy"></iframe>
+        <div style="padding:1.5rem;">
+          <div style="display:flex;align-items:flex-start;gap:14px;">
+            <div style="width:40px;height:40px;border-radius:12px;background:rgba(139,34,82,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:var(--maroon);"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            </div>
+            <div style="flex:1;">
+              <span style="display:inline-block;font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(139,34,82,0.08);color:var(--maroon);margin-bottom:6px;letter-spacing:0.05em;">CABANG 2</span>
+              <h4 style="font-weight:700;font-size:1.05rem;color:var(--dark);margin-bottom:4px;">Palupi Dental Care</h4>
+              <p style="font-size:0.85rem;color:#8070A0;margin-bottom:1rem;">Jl. Merdeka No.20A, Samarinda</p>
+              <a href="https://maps.app.goo.gl/hmyjwqMyXAftqqSS9" target="_blank"
+                style="display:inline-flex;align-items:center;gap:5px;font-size:0.82rem;font-weight:600;color:var(--maroon);text-decoration:none;transition:opacity 0.2s;" onmouseover="this.style.opacity=0.65" onmouseout="this.style.opacity=1">
+                Buka di Google Maps
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════ CTA ══════════════════════ -->
+<section style="padding:6rem 0;background:linear-gradient(135deg,#1E0A3C 0%,#4A2478 45%,#8560A8 100%);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 512 512%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.75%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%220.05%22/%3E%3C/svg%3E');background-size:256px;opacity:0.6;pointer-events:none;"></div>
+  <div style="position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:#A078C0;filter:blur(100px);opacity:0.25;"></div>
+
+  <div class="max-w-4xl mx-auto px-6 text-center" style="position:relative;z-index:1;">
+    <div data-aos="fade-up">
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto 2rem;">
+        <img src="87069801-a8a8-498c-bb68-bb15550632aa_removalai_preview.png" alt="Palupi Dental Care"
+          style="width:54px;height:54px;object-fit:contain;" />
+        <div style="text-align:left;">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.45rem;color:#fff;line-height:1;letter-spacing:-0.01em;">Palupi</div>
+          <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.16em;color:rgba(220,190,255,0.85);line-height:1.2;margin-top:3px;">DENTAL CARE</div>
+        </div>
+      </div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:1.25rem;">
+        Siap untuk Senyum<br/>yang Lebih Percaya Diri?
+      </h2>
+      <p style="color:rgba(255,255,255,0.7);font-size:1.05rem;line-height:1.75;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto;">
+        Konsultasikan kebutuhan gigi kamu bersama dokter kami hari ini. Langkah pertama yang paling mudah — cukup hubungi kami.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;">
+        <a href="https://wa.me/628135002919" target="_blank" class="btn-primary" style="background:#fff;color:var(--purple-deep);padding:15px 34px;font-size:1rem;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.11 1.524 5.833L0 24l6.341-1.498A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.927 0-3.742-.518-5.307-1.422l-.38-.225-3.766.89.947-3.666-.248-.388A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          +62813 5002 9191
+        </a>
+        <a href="https://wa.me/628215577612" target="_blank" class="btn-outline" style="padding:15px 34px;font-size:1rem;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.11 1.524 5.833L0 24l6.341-1.498A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.927 0-3.742-.518-5.307-1.422l-.38-.225-3.766.89.947-3.666-.248-.388A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          +62821 5577 6129
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer style="background:var(--dark);padding:5rem 0 2.5rem;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-12" style="margin-bottom:3rem;">
+
+      <!-- Brand -->
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+            <img src="87069801-a8a8-498c-bb68-bb15550632aa_removalai_preview.png" alt="Logo" style="width:38px;height:38px;object-fit:contain;" />
+          </div>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:#fff;line-height:1.1;">Palupi</div>
+            <div style="font-size:0.65rem;font-weight:600;letter-spacing:0.1em;color:var(--purple);line-height:1.1;">DENTAL CARE</div>
+          </div>
+        </div>
+        <p style="font-size:0.85rem;line-height:1.75;color:rgba(255,255,255,0.45);margin-bottom:1.25rem;">
+          Perawatan gigi yang nyaman, modern, dan terpercaya untuk seluruh keluarga di Samarinda.
+        </p>
+        <a href="https://www.instagram.com/palupidentalcare" target="_blank"
+          style="display:inline-flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:opacity 0.2s;" onmouseover="this.style.opacity=0.75" onmouseout="this.style.opacity=1">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          @palupidentalcare
+        </a>
+      </div>
+
+      <!-- Nav -->
+      <div>
+        <h5 style="font-weight:600;color:#fff;font-size:0.875rem;margin-bottom:1.25rem;">Navigasi</h5>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="#about" style="font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:opacity 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.75)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Tentang Kami</a>
+          <a href="#services" style="font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.75)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Layanan</a>
+          <a href="#results" style="font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.75)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Hasil Treatment</a>
+          <a href="#testimonials" style="font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.75)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Testimoni</a>
+          <a href="#locations" style="font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.75)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Lokasi</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h5 style="font-weight:600;color:#fff;font-size:0.875rem;margin-bottom:1.25rem;">Hubungi Kami</h5>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://wa.me/628135002919" target="_blank" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.11 1.524 5.833L0 24l6.341-1.498A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.927 0-3.742-.518-5.307-1.422l-.38-.225-3.766.89.947-3.666-.248-.388A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            <span style="font-size:0.85rem;color:rgba(255,255,255,0.45);">+62813 5002 9191</span>
+          </a>
+          <a href="https://wa.me/628215577612" target="_blank" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.11 1.524 5.833L0 24l6.341-1.498A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.927 0-3.742-.518-5.307-1.422l-.38-.225-3.766.89.947-3.666-.248-.388A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            <span style="font-size:0.85rem;color:rgba(255,255,255,0.45);">+62821 5577 6129</span>
+          </a>
+          <div style="display:flex;align-items:flex-start;gap:10px;">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" style="color:rgba(255,255,255,0.3);flex-shrink:0;margin-top:2px;"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            <span style="font-size:0.85rem;color:rgba(255,255,255,0.45);line-height:1.6;">Jl. Ahmad Yani 1 No.43B &amp;<br/>Jl. Merdeka No.20A, Samarinda</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="border-top:1px solid rgba(255,255,255,0.07);padding-top:2rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.25);">© 2026 Palupi Dental Care. All rights reserved.</p>
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.25);">Samarinda, Kalimantan Timur</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════ SERVICE MODAL ══════════════════════ -->
+<div id="service-modal-overlay" onclick="closeServiceModal(event)">
+  <div id="service-modal">
+    <button class="modal-close-btn" onclick="closeServiceModal(null,true)" aria-label="Tutup">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <div id="service-modal-content"></div>
+  </div>
+</div>
+
+<!-- WhatsApp Float Button -->
+<a id="wa-float" href="https://wa.me/628135002919" target="_blank" title="Chat WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.11 1.524 5.833L0 24l6.341-1.498A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.927 0-3.742-.518-5.307-1.422l-.38-.225-3.766.89.947-3.666-.248-.388A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+
+<!-- ══════════════════════ SCRIPTS ══════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // AOS
+  AOS.init({
+    duration: 750,
+    once: true,
+    easing: 'ease-out-cubic',
+    offset: 70,
+    delay: 0,
+    anchorPlacement: 'top-bottom'
+  });
+
+  // ── Slogan rotation ──
+  (function() {
+    const slogans = [
+      'Palupi Dental Care hadir untuk memberikan perawatan gigi yang nyaman, modern, dan terpercaya — karena senyum terbaik Anda dimulai dari sini.',
+      'Perawatan Gigi yang Tepat, Senyum yang Sempurna',
+      'Klinik Gigi Modern untuk Keluarga Indonesia',
+      'Kepercayaan Dimulai dari Senyuman'
+    ];
+    const el = document.getElementById('slogan-text');
+    if (!el) return;
+    let idx = 0;
+    function showSlogan(i) {
+      el.textContent = slogans[i];
+      el.style.animation = 'none';
+      el.offsetHeight; // reflow
+      el.style.animation = 'slogan-fade-in 0.6s ease-out forwards';
+    }
+    showSlogan(0);
+    setInterval(function() {
+      el.style.animation = 'slogan-fade-out 0.5s ease-in forwards';
+      setTimeout(function() {
+        idx = (idx + 1) % slogans.length;
+        showSlogan(idx);
+      }, 500);
+    }, 4000);
+  })();
+
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  function closeMM() { mobileMenu.classList.remove('open'); }
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMM));
+
+  // ── Counter animation ──
+  function animateCount(el, target, suffix) {
+    let cur = 0;
+    const step = target / (1600 / 16);
+    const t = setInterval(() => {
+      cur = Math.min(cur + step, target);
+      el.textContent = Math.floor(cur).toLocaleString() + suffix;
+      if (cur >= target) clearInterval(t);
+    }, 16);
+  }
+
+  // Stats section counters
+  const statObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCount(e.target, parseInt(e.target.dataset.target, 10), e.target.dataset.suffix || '');
+        statObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.stat-num[data-target]').forEach(el => statObs.observe(el));
+
+  // Hero mini stat counter (5000+)
+  const heroStatEl = document.getElementById('hero-pasien');
+  if (heroStatEl) {
+    const heroObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animateCount(heroStatEl, parseInt(heroStatEl.dataset.heroTarget, 10), heroStatEl.dataset.heroSuffix || '');
+          heroObs.unobserve(heroStatEl);
+        }
+      });
+    }, { threshold: 0.5 });
+    heroObs.observe(heroStatEl);
+  }
+
+  // ── Nav pill hover animation ──
+  (function () {
+    const desktopNav = document.getElementById('desktop-nav');
+    const pill = document.getElementById('nav-pill');
+    if (!desktopNav || !pill) return;
+    const links = desktopNav.querySelectorAll('.nav-link');
+    links.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        const navRect = desktopNav.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
+        pill.style.left   = (linkRect.left - navRect.left) + 'px';
+        pill.style.width  = linkRect.width + 'px';
+        pill.style.opacity = '1';
+      });
+    });
+    desktopNav.addEventListener('mouseleave', () => {
+      pill.style.opacity = '0';
+    });
+  })();
+
+  // ── Service Modal ──
+  const serviceData = {
+    scaling: {
+      icon: '🦷',
+      title: 'Scaling & Pembersihan Gigi',
+      color: '#9B76B5',
+      desc: 'Scaling adalah prosedur pembersihan karang gigi (kalkulus) dan plak yang menempel di permukaan gigi dan di bawah garis gusi menggunakan alat ultrasonik. Berbeda dari sikat gigi biasa, scaling mampu menjangkau area yang tidak bisa dibersihkan sendiri.',
+      steps: [
+        { n:'1', t:'Pemeriksaan awal', d:'Dokter memeriksa kondisi gigi dan tingkat penumpukan karang.' },
+        { n:'2', t:'Scaling ultrasonik', d:'Alat ultrasonik memecah karang gigi dengan getaran halus dan semprotan air.' },
+        { n:'3', t:'Polishing', d:'Permukaan gigi dipoles dengan pasta khusus agar halus dan bersih.' },
+        { n:'4', t:'Fluoride (opsional)', d:'Aplikasi fluoride untuk memperkuat enamel gigi.' }
+      ],
+      info: [
+        { label: 'Durasi', val: '30–60 menit' },
+        { label: 'Frekuensi', val: 'Setiap 6 bulan' },
+        { label: 'Rasa sakit', val: 'Minimal, bisa mati rasa' }
+      ]
+    },
+    kawat: {
+      icon: '😁',
+      title: 'Kawat Gigi (Behel)',
+      color: '#8B2252',
+      desc: 'Kawat gigi adalah perangkat ortodonti yang digunakan untuk meratakan susunan gigi yang tidak rapi, menutup celah antar gigi, dan memperbaiki gigitan. Tersedia dalam pilihan bracket metal maupun keramik yang lebih estetis.',
+      steps: [
+        { n:'1', t:'Konsultasi & X-ray', d:'Dokter menganalisis struktur gigi dan tulang untuk merencanakan perawatan.' },
+        { n:'2', t:'Pemasangan bracket', d:'Bracket ditempel di permukaan gigi dengan lem khusus, lalu kawat dipasang.' },
+        { n:'3', t:'Kontrol rutin', d:'Setiap 3–4 minggu kawat dikencangkan untuk menggerakkan gigi bertahap.' },
+        { n:'4', t:'Pelepasan & retainer', d:'Setelah gigi rapi, kawat dilepas dan retainer dipakai untuk menjaga posisi.' }
+      ],
+      info: [
+        { label: 'Durasi perawatan', val: '1–3 tahun' },
+        { label: 'Jenis', val: 'Metal / Keramik' },
+        { label: 'Kontrol', val: 'Tiap 3–4 minggu' }
+      ]
+    },
+    veneer: {
+      icon: '✨',
+      title: 'Veneer Gigi',
+      color: '#9B76B5',
+      desc: 'Veneer adalah lapisan tipis porselen atau komposit yang ditempelkan di bagian depan gigi untuk memperbaiki warna, bentuk, ukuran, atau panjang gigi. Hasilnya sangat natural karena dibuat sesuai warna asli gigi kamu.',
+      steps: [
+        { n:'1', t:'Konsultasi & desain', d:'Dokter mendiskusikan bentuk dan warna yang kamu inginkan.' },
+        { n:'2', t:'Preparasi gigi', d:'Lapisan tipis enamel (0,5 mm) dibuang untuk memberi ruang veneer.' },
+        { n:'3', t:'Cetakan & lab', d:'Gigi dicetak dan dikirim ke laboratorium untuk membuat veneer yang presisi.' },
+        { n:'4', t:'Pemasangan', d:'Veneer ditempel permanen dengan semen khusus dan sinar UV.' }
+      ],
+      info: [
+        { label: 'Durasi proses', val: '2–3 kunjungan' },
+        { label: 'Ketahanan', val: '10–15 tahun' },
+        { label: 'Bahan', val: 'Porselen / Komposit' }
+      ]
+    },
+    bleaching: {
+      icon: '🌟',
+      title: 'Bleaching / Whitening Gigi',
+      color: '#D97706',
+      desc: 'Bleaching gigi adalah prosedur pemutihan gigi menggunakan bahan peroksida konsentrasi tinggi yang diaktifkan dengan sinar khusus. Prosedur in-office ini mampu mencerahkan gigi 3–8 shade lebih putih dalam satu kali kunjungan dengan aman.',
+      steps: [
+        { n:'1', t:'Perlindungan gusi', d:'Gusi dilindungi dengan gel pelindung agar tidak terkena bahan bleaching.' },
+        { n:'2', t:'Aplikasi gel', d:'Gel peroksida dioleskan merata ke seluruh permukaan gigi.' },
+        { n:'3', t:'Aktivasi sinar', d:'Sinar LED/UV mengaktifkan gel untuk memecah pigmen warna di dalam enamel.' },
+        { n:'4', t:'Pembilasan', d:'Gel dibersihkan, hasilnya langsung terlihat lebih cerah dan putih.' }
+      ],
+      info: [
+        { label: 'Durasi', val: '60–90 menit' },
+        { label: 'Hasil', val: '3–8 shade lebih putih' },
+        { label: 'Ketahanan', val: '1–2 tahun' }
+      ]
+    },
+    implan: {
+      icon: '🦿',
+      title: 'Implan Gigi',
+      color: '#059669',
+      desc: 'Implan gigi adalah solusi pengganti gigi yang hilang dengan cara menanamkan sekrup titanium ke dalam tulang rahang sebagai akar buatan. Di atasnya dipasang mahkota gigi yang tampak dan terasa persis seperti gigi asli.',
+      steps: [
+        { n:'1', t:'Pemeriksaan & CBCT scan', d:'Dokter menganalisis densitas tulang rahang untuk memastikan layak implan.' },
+        { n:'2', t:'Pemasangan sekrup titanium', d:'Sekrup ditanamkan ke tulang rahang dalam prosedur bedah minor dengan bius lokal.' },
+        { n:'3', t:'Osseointegration', d:'Tulang menyatu dengan titanium selama 3–6 bulan.' },
+        { n:'4', t:'Pemasangan mahkota', d:'Mahkota permanen dipasang di atas implan, hasilnya seperti gigi asli.' }
+      ],
+      info: [
+        { label: 'Total proses', val: '3–6 bulan' },
+        { label: 'Ketahanan', val: 'Seumur hidup' },
+        { label: 'Bahan', val: 'Titanium + porselen' }
+      ]
+    },
+    cabut: {
+      icon: '🔧',
+      title: 'Cabut Gigi',
+      color: '#DC2626',
+      desc: 'Pencabutan gigi dilakukan ketika gigi sudah terlalu rusak untuk diselamatkan, terinfeksi parah, atau perlu dicabut untuk keperluan ortodonti. Dengan bius lokal modern, prosedur ini hampir tidak terasa sakit.',
+      steps: [
+        { n:'1', t:'Suntik bius lokal', d:'Area sekitar gigi dibius sehingga kamu tidak merasakan nyeri sama sekali.' },
+        { n:'2', t:'Pelonggaran gigi', d:'Dokter melonggarkan gigi menggunakan elevator dengan gerakan lembut.' },
+        { n:'3', t:'Pencabutan', d:'Gigi dicabut dengan forsep secara hati-hati dan cepat.' },
+        { n:'4', t:'Perawatan pasca cabut', d:'Kapas ditekan, dokter memberikan instruksi perawatan dan obat jika perlu.' }
+      ],
+      info: [
+        { label: 'Durasi', val: '15–30 menit' },
+        { label: 'Pemulihan', val: '3–7 hari' },
+        { label: 'Rasa sakit', val: 'Minim dengan bius' }
+      ]
+    },
+    tambal: {
+      icon: '🖊️',
+      title: 'Tambal Gigi (Komposit)',
+      color: '#9B76B5',
+      desc: 'Tambal gigi menggunakan bahan komposit resin yang sewarna dengan gigi asli untuk mengisi rongga akibat gigi berlubang. Hasilnya natural, tidak terlihat seperti tambalan logam, dan kuat untuk mengunyah sehari-hari.',
+      steps: [
+        { n:'1', t:'Pembersihan kavitas', d:'Bagian gigi yang berlubang dan terinfeksi dibersihkan tuntas.' },
+        { n:'2', t:'Etching & bonding', d:'Permukaan kavitas dietsa dan dilapisi bonding agent agar komposit melekat kuat.' },
+        { n:'3', t:'Pengisian komposit', d:'Bahan komposit diisi lapis demi lapis dan dipadatkan menggunakan sinar UV.' },
+        { n:'4', t:'Finishing & poles', d:'Tambalan dibentuk sesuai anatomi gigi dan dipoles hingga halus.' }
+      ],
+      info: [
+        { label: 'Durasi', val: '30–60 menit' },
+        { label: 'Ketahanan', val: '5–10 tahun' },
+        { label: 'Warna', val: 'Menyesuaikan gigi asli' }
+      ]
+    },
+    psa: {
+      icon: '❤️',
+      title: 'Perawatan Saluran Akar (PSA)',
+      color: '#4338CA',
+      desc: 'Perawatan Saluran Akar (PSA) atau root canal dilakukan saat infeksi bakteri sudah mencapai pulpa (syaraf) gigi. Tujuannya adalah menyelamatkan gigi agar tidak perlu dicabut dengan cara membersihkan infeksi dari dalam saluran akar.',
+      steps: [
+        { n:'1', t:'Foto rontgen & diagnosis', d:'Dokter melihat seberapa dalam infeksi dan jumlah saluran akar yang perlu dirawat.' },
+        { n:'2', t:'Pembukaan akses', d:'Lubang kecil dibuat di mahkota gigi untuk mengakses saluran akar.' },
+        { n:'3', t:'Pembersihan saluran', d:'Jaringan pulpa yang terinfeksi dibersihkan dengan file khusus dan irigasi antiseptik.' },
+        { n:'4', t:'Pengisian & restorasi', d:'Saluran diisi dengan gutta-percha, kemudian gigi ditutup dengan tambalan atau crown.' }
+      ],
+      info: [
+        { label: 'Sesi', val: '1–3 kunjungan' },
+        { label: 'Durasi per sesi', val: '60–90 menit' },
+        { label: 'Tujuan', val: 'Selamatkan gigi asli' }
+      ]
+    }
+  };
+
+  function openServiceModal(key) {
+    const data = serviceData[key];
+    if (!data) return;
+    const stepsHTML = data.steps.map(s =>
+      `<div class="modal-step">
+        <div class="modal-step-num">${s.n}</div>
+        <div><strong style="font-size:0.88rem;color:var(--dark);">${s.t}</strong><p style="font-size:0.82rem;color:#7A7090;margin-top:3px;line-height:1.6;">${s.d}</p></div>
+      </div>`
+    ).join('');
+    const infoHTML = data.info.map(i =>
+      `<div style="text-align:center;padding:10px 14px;background:rgba(155,118,181,0.07);border-radius:12px;">
+        <div style="font-size:0.68rem;color:#A090C0;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">${i.label}</div>
+        <div style="font-size:0.9rem;font-weight:700;color:var(--dark);margin-top:3px;">${i.val}</div>
+      </div>`
+    ).join('');
+    document.getElementById('service-modal-content').innerHTML = `
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
+        <div style="font-size:2rem;line-height:1;">${data.icon}</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--dark);line-height:1.2;">${data.title}</h3>
+      </div>
+      <div style="width:40px;height:3px;background:${data.color};border-radius:2px;margin-bottom:1.25rem;"></div>
+      <p style="font-size:0.88rem;color:#5A5070;line-height:1.75;margin-bottom:1.5rem;">${data.desc}</p>
+      <h4 style="font-size:0.82rem;font-weight:700;color:var(--dark);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1rem;">Prosedur</h4>
+      ${stepsHTML}
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:1.5rem;">${infoHTML}</div>
+      <a href="https://wa.me/628135002919?text=Halo,%20saya%20ingin%20tanya%20tentang%20${encodeURIComponent(data.title)}" target="_blank"
+        class="btn-primary" style="width:100%;justify-content:center;margin-top:1.5rem;font-size:0.9rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.11 1.524 5.833L0 24l6.341-1.498A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.927 0-3.742-.518-5.307-1.422l-.38-.225-3.766.89.947-3.666-.248-.388A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Tanya Lebih Lanjut via WhatsApp
+      </a>`;
+    document.getElementById('service-modal-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeServiceModal(e, force) {
+    if (!force && e && e.target !== document.getElementById('service-modal-overlay')) return;
+    document.getElementById('service-modal-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Close modal on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeServiceModal(null, true);
+  });
+
+
+  // ── Ethereal Shadow Animation ──
+  (function() {
+    const hueEl = document.getElementById('ethereal-hue');
+    if (!hueEl) return;
+    let hue = 180;
+    function tick() {
+      hue = (hue + 1.5) % 360;
+      hueEl.setAttribute('values', String(hue));
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+
+  // ── Active nav link on scroll ──
+  (function() {
+    const sections = ['about','doctors','services','results','testimonials','locations'];
+    const getLinks = id => document.querySelectorAll('a[href="#' + id + '"]');
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          sections.forEach(s => getLinks(s).forEach(l => l.classList.remove('active')));
+          getLinks(id).forEach(l => l.classList.add('active'));
+        }
+      });
+    }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) obs.observe(el);
+    });
+  })();
+
+  // ── Before/After Sliders ──
+  document.querySelectorAll('[data-ba-slider]').forEach(slider => {
+    const before = slider.querySelector('.ba-img-before');
+    const handle = slider.querySelector('.ba-handle');
+    if (!before || !handle) return;
+
+    let dragging = false;
+
+    function setPos(clientX) {
+      const rect = slider.getBoundingClientRect();
+      const pct = Math.min(100, Math.max(0, (clientX - rect.left) / rect.width * 100));
+      before.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+      handle.style.left = pct + '%';
+    }
+
+    slider.addEventListener('mousedown',  e => { dragging = true; setPos(e.clientX); });
+    window.addEventListener('mousemove',  e => { if (dragging) setPos(e.clientX); });
+    window.addEventListener('mouseup',    () => { dragging = false; });
+    slider.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+    slider.addEventListener('touchmove',  e => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
+    slider.addEventListener('touchend',   () => { dragging = false; });
+  });
+
+  // ── GSAP ScrollTrigger Animations ──
+  (function() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Hero content slow-parallax
+    const heroContent = document.getElementById('hero-content');
+    if (heroContent) {
+      gsap.to(heroContent, {
+        y: -110,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#hero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 0.8
+        }
+      });
+    }
+
+    // 2. About photo subtle parallax
+    const aboutPhoto = document.getElementById('about-photo-wrap');
+    if (aboutPhoto) {
+      gsap.fromTo(aboutPhoto,
+        { y: 35 },
+        {
+          y: -35,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '#about',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1
+          }
+        }
+      );
+    }
+
+    // 3. Stats — animated counter (purely additive, no conflict with AOS on parent)
+    document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      const suffix = el.getAttribute('data-suffix') || '';
+      const obj    = { val: 0 };
+      ScrollTrigger.create({
+        trigger: el,
+        start: 'top 90%',
+        once: true,
+        onEnter() {
+          gsap.to(obj, {
+            val: target,
+            duration: 2,
+            ease: 'power3.out',
+            onUpdate() { el.textContent = Math.round(obj.val) + suffix; }
+          });
+        }
+      });
+    });
+
+    // 4. Auto-scroll image strip — fade + subtle scale on enter
+    const strip = document.querySelector('.img-strip-outer');
+    if (strip) {
+      gsap.fromTo(strip,
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power2.out',
+          scrollTrigger: { trigger: strip, start: 'top 92%', once: true }
+        }
+      );
+    }
+
+    // 5. Footer CTA block — gentle rise
+    const footerCta = document.querySelector('footer') || document.querySelector('[data-aos="fade-up"]');
+    const footer = document.querySelector('footer');
+    if (footer) {
+      gsap.fromTo(footer,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: 'power2.out',
+          scrollTrigger: { trigger: footer, start: 'top 90%', once: true }
+        }
+      );
+    }
+  })();
+</script>
+
+</body>
+</html>
