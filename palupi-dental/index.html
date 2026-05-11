@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Palupi Dental Care | Klinik Gigi Terbaik di Samarinda</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Palupi Dental Care",
+    "url": "https://palupidentalcare.com",
+    "logo": "https://palupidentalcare.com/logo.png"
+  }
+  </script>
 
   <!-- SEO -->
   <meta name="description" content="Palupi Dental Care — klinik gigi modern di Samarinda. 5 dokter berpengalaman, rating 4.7 Google, tersedia di 2 cabang strategis. Scaling, kawat gigi, veneer, bleaching & implan." />
@@ -1848,15 +1857,7 @@
   })();
 </script>
 
-<!-- Site Name untuk Google Search (standalone WebSite schema) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Palupi Dental Care",
-  "url": "https://palupidentalcare.com/"
-}
-</script>
+<!-- Site Name untuk Google Search — lihat @graph di bawah untuk WebSite schema lengkap -->
 
 <!-- ══════════════════════ SCHEMA.ORG STRUCTURED DATA ══════════════════════ -->
 <script type="application/ld+json">
@@ -1870,9 +1871,11 @@
       "url": "https://palupidentalcare.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://palupidentalcare.com/favicon.png"
+        "url": "https://palupidentalcare.com/logo.png",
+        "width": 390,
+        "height": 110
       },
-      "image": "https://palupidentalcare.com/favicon.png",
+      "image": "https://palupidentalcare.com/logo.png",
       "description": "Klinik gigi modern di Samarinda dengan 5+ dokter gigi berpengalaman. Layanan scaling, kawat gigi, veneer, bleaching, dan implan gigi. Rating 4.7 di Google.",
       "telephone": "+6282155776129",
       "email": "info@palupidentalcare.com",
@@ -1982,9 +1985,18 @@
       "@id": "https://palupidentalcare.com/#website",
       "url": "https://palupidentalcare.com/",
       "name": "Palupi Dental Care",
+      "alternateName": "Palupi Dental Care Samarinda",
       "description": "Klinik gigi modern di Samarinda — scaling, kawat gigi, veneer, bleaching, implan.",
       "inLanguage": "id-ID",
-      "publisher": { "@id": "https://palupidentalcare.com/#organization" }
+      "publisher": { "@id": "https://palupidentalcare.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://palupidentalcare.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "FAQPage",
